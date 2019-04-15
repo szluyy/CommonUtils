@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun show(v:View){
-        ToastUtils.show(this,"hello world")
+        ToastUtils.show(this,"")
 
     }
 }
