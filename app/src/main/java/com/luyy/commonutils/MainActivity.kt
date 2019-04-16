@@ -3,6 +3,7 @@ package com.luyy.commonutils
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.luyy.lib.utils.DialogUtils
 import com.luyy.lib.utils.ToastUtils
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun show(v:View){
-        ToastUtils.show(this,"hello 11111111111")
+       DialogUtils.showLoading(this,"加载中.....")
 
     }
 }
