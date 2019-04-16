@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.luyy.lib.utils.DialogUtils
+import com.luyy.lib.utils.ImageLoaderUtils
 import com.luyy.lib.utils.ToastUtils
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun show(v:View){
-       DialogUtils.showLoading(this,"加载中.....")
-
+        ImageLoaderUtils.load(null,image)
     }
 }
