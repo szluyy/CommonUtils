@@ -1,29 +1,41 @@
 package com.luyy.lib.utils;
 
 import android.util.Log;
+import com.luyy.lib.BuildConfig;
 
 public class LogUtils {
     public static void d(String msg){
-        String tag=generateTag();
-        Log.d(tag,msg);
+        if(BuildConfig.DEBUG){
+            String tag=generateTag();
+            Log.d(tag,msg);
+        }
     }
 
     public static void v(String msg){
-        String tag=generateTag();
-        Log.v(tag,msg);
+        if(BuildConfig.DEBUG){
+            String tag=generateTag();
+            Log.v(tag,msg);
+        }
     }
 
     public static void e(String msg){
-        String tag=generateTag();
-        Log.e(tag,msg);
+        if(BuildConfig.DEBUG){
+            String tag=generateTag();
+            Log.e(tag,msg);
+        }
     }
     public static void i(String msg){
-        String tag=generateTag();
-        Log.i(tag,msg);
+        if(BuildConfig.DEBUG){
+            String tag=generateTag();
+            Log.i(tag,msg);
+        }
     }
     public static void w(String msg){
-        String tag=generateTag();
-        Log.w(tag,msg);
+        if(BuildConfig.DEBUG){
+            String tag=generateTag();
+            Log.w(tag,msg);
+        }
+
     }
 
     /**

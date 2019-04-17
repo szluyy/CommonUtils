@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ValidateCodeView">
+        <attr name="count" format="integer"></attr>
+        <attr name="inputBg" format="reference"></attr>
+        <attr name="inputTargetBg" format="reference"></attr>
+        <attr name="space" format="dimension"></attr>
+        <attr name="codeTextColor" format="color|reference"></attr>
+        <attr name="codeTextSize" format="dimension"></attr>
+    </declare-styleable>
+</resources>
