@@ -5,8 +5,11 @@ import android.graphics.drawable.GradientDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.luyy.lib.net.GenericCallback
+import com.luyy.lib.net.OkHttpUtils
 import com.luyy.lib.utils.DrawableUtils
 import com.luyy.lib.utils.ImageLoaderUtils
+import com.luyy.lib.utils.LogUtils
 import com.luyy.lib.utils.ToastUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,6 +31,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun show(v:View){
-        ImageLoaderUtils.load(null,image)
+       OkHttpUtils.getInstance().get("http://www.baidu.com",object:GenericCallback<String>(){
+           override fun onError(msg: String?) {
+           }
+
+           override fun onSuccess(t: String?) {
+                LogUtils.d(t)
+           }
+       })
     }
 }

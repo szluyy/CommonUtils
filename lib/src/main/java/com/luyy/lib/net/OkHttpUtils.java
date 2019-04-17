@@ -1,8 +1,9 @@
 package com.luyy.lib.net;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
+import com.luyy.lib.utils.LogUtils;
+import okhttp3.*;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -47,16 +48,16 @@ public class OkHttpUtils {
         return mInstance;
 
     }
-    public OkHttpUtils getInstance(){
+    public static OkHttpUtils getInstance(){
         return init(null);
     }
 
-    public void get(String url) {
-        buildRequest(url);
+    public void get(String url,GenericCallback callback) {
+        buildRequest(url,callback);
     }
 
-    private static void buildRequest(String url) {
-        Request request=new Request.Builder().url(url).build();
-
+    private static void buildRequest(String url,GenericCallback callback) {
+        Request request=new GetRequest(url,"").generateRequest();
+        mClient.newCall(request).enqueue(callback);
     }
 }
