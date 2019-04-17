@@ -8,6 +8,7 @@
         tools:context=".MainActivity">
 
     <TextView
+
             android:id="@+id/tv"
             android:onClick="show"
             android:layout_width="wrap_content"
