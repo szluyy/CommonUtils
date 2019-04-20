@@ -5,10 +5,10 @@ import com.luyy.lib.BuildConfig;
 
 public class LogUtils {
     public static void d(String msg){
-        if(BuildConfig.DEBUG){
+//        if(BuildConfig.DEBUG){
             String tag=generateTag();
             Log.d(tag,msg);
-        }
+//        }
     }
 
     public static void v(String msg){
