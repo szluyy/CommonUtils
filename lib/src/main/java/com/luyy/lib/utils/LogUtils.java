@@ -5,37 +5,27 @@ import com.luyy.lib.BuildConfig;
 
 public class LogUtils {
     public static void d(String msg){
-//        if(BuildConfig.DEBUG){
             String tag=generateTag();
             Log.d(tag,msg);
-//        }
     }
 
     public static void v(String msg){
-        if(BuildConfig.DEBUG){
             String tag=generateTag();
             Log.v(tag,msg);
-        }
+
     }
 
     public static void e(String msg){
-        if(BuildConfig.DEBUG){
             String tag=generateTag();
             Log.e(tag,msg);
-        }
     }
     public static void i(String msg){
-        if(BuildConfig.DEBUG){
             String tag=generateTag();
             Log.i(tag,msg);
-        }
     }
     public static void w(String msg){
-        if(BuildConfig.DEBUG){
             String tag=generateTag();
             Log.w(tag,msg);
-        }
-
     }
 
     /**

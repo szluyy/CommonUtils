@@ -4,6 +4,8 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Looper
+import android.os.MessageQueue
 import android.view.View
 import com.luyy.lib.net.GenericCallback
 import com.luyy.lib.net.OkHttpUtils
@@ -28,6 +30,13 @@ class MainActivity : AppCompatActivity() {
                 .stroke(1,Color.GRAY)
                 .build()
         )
+        Looper.myQueue().addIdleHandler(object:MessageQueue.IdleHandler{
+            override fun queueIdle(): Boolean {
+                LogUtils.d("i am waiting for you")
+                return false
+            }
+
+        })
     }
 
     fun show(v:View){
