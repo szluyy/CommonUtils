@@ -1,9 +1,6 @@
 package com.luyy.lib.utils;
 
-import android.app.Activity;
 import android.app.Application;
-import android.content.Context;
-import android.support.v4.app.Fragment;
 import android.widget.ImageView;
 import com.luyy.lib.ImageLoader.GlideLoader;
 import com.luyy.lib.ImageLoader.ILoader;
